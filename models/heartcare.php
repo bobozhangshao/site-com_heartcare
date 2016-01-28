@@ -90,7 +90,7 @@ class HeartCareModelHeartCare extends JModelList
     public function getTxtData()
     {
         $file = './media/com_heartcare/data/'.$this->getState('wave.route');
-        $content = file_get_contents($file);
+        $content = @file_get_contents($file) or die('Warning');
 
         $yname = $this->getState('wave.type');
         $arr = explode("\r\n", $content);

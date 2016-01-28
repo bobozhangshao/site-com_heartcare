@@ -26,11 +26,11 @@ defined('_JEXEC') or die('Restricted Access');
                     <?php foreach($this->items as $i => $row ):
                         ?>
                         <tr>
-                            <td><a href="#doctor<?php echo $row->id; ?>Modal" role="button" class="btn btn-link" data-toggle="modal" title="<?php echo JText::_('COM_HEARTCARE_MEASUREDATA_SHOW_DESC'); ?>">
+                            <td><a href="#doctor<?php echo $row->id; ?>Modal" role="button" class="btn btn-link" data-toggle="modal">
                                     <?php if($row->name){echo $row->name;} else{echo JText::_('COM_HEARTCARE_HEALTHDATA_NODATA');}  ?>
                                 </a>
                             </td>
-                            <td><a href="#doctor<?php echo $row->id; ?>Modal" role="button" class="btn btn-link" data-toggle="modal" title="<?php echo JText::_('COM_HEARTCARE_MEASUREDATA_SHOW_DESC'); ?>">
+                            <td><a href="#doctor<?php echo $row->id; ?>Modal" role="button" class="btn btn-link" data-toggle="modal">
                                     <?php if($row->username){echo $row->username;} else{echo JText::_('COM_HEARTCARE_HEALTHDATA_NODATA');}  ?>
                                 </a>
                             </td>
@@ -44,7 +44,7 @@ defined('_JEXEC') or die('Restricted Access');
                                 'doctor'.$row->id.'Modal',
                                 array(
                                     'url' => $link,
-                                    'title' => JText::_('COM_HEARTCARE_WAVESHOW'),
+                                    'title' => JText::_('COM_HEARTCARE_FRONTEND_THIS_IS_THE_DOCTOR'),
                                     'height' => '400px',
                                     'width' => '3000px',
                                     'footer' => '<button class="btn" data-dismiss="modal" aria-hidden="true">'
